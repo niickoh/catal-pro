@@ -1,3 +1,4 @@
+<p-toast></p-toast>
 <div id="layoutDefault">
     <div id="layoutDefault_content">
         <main>
@@ -18,15 +19,16 @@
                                 <div class="dropdown-menu dropdown-menu-end me-lg-n20 me-xl-n15 animated--fade-in-up" aria-labelledby="navbarDropdownPages">
                                     <div class="row g-0">
                                         <div class="col-lg-4 p-lg-5">
-                                            <h6 class="dropdown-header text-primary">Venta de propiedades</h6>
-                                            <a class="dropdown-item" href="page-basic.html">Arriendo de propiedades</a>
-                                            <a class="dropdown-item" href="page-company-about.html">Administración de propiedades</a>
+                                            <h6 class="dropdown-header text-primary">Nuestros Servicios</h6>
+                                            <a class="dropdown-item" (click)="scrollToPortfolio('servicios')">Venta de propiedades</a>
+                                            <a class="dropdown-item" (click)="scrollToPortfolio('servicios')">Arriendo de propiedades</a>
+                                            <a class="dropdown-item" (click)="scrollToPortfolio('servicios')">Administración de propiedades</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        <a class="btn fw-500 ms-lg-4 btn-primary" href="https://shop.startbootstrap.com/sb-ui-kit-pro">
+                        <a class="btn fw-500 ms-lg-4 btn-primary" (click)="scrollToPortfolio('contacto')">
                             ¡Contáctanos!
                             <i class="ms-2" data-feather="arrow-right"></i>
                         </a>
@@ -41,8 +43,8 @@
                             <div class="col-xl-8 col-lg-10 text-center">
                                 <h1 class="page-header-ui-title">Construyendo sueños. Administrando realidades.</h1>
                                 <!-- <p class="page-header-ui-text mb-5">Opening your home to vacationers is a great way to earn some extra income, and this is a great way to get started!</p> -->
-                                <a class="btn btn-primary fw-500 me-2" href="#!">Encuentra tu arriendo</a>
-                                <a class="btn btn-link fw-500" href="#!">Administramos tu propiedad </a>
+                                <a class="btn btn-primary fw-500 me-2" (click)="scrollToPortfolio('contacto')">¡Contáctanos!</a>
+                                <!-- <a class="btn btn-link fw-500" href="#!">Administramos tu propiedad </a> -->
                             </div>
                         </div>
                     </div>
@@ -52,7 +54,53 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
                 </div>
             </header>
-            <section class="bg-white py-10">
+            <section id="servicios" class="bg-white py-10">
+                <div class="container px-5">
+                    <div class="text-center mb-4"><h2>Nuestros Servicios</h2></div>
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <a class="card text-decoration-none h-100 lift" href="#!">
+                                <div class="card-body py-5">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-stack icon-stack-xl bg-primary text-white flex-shrink-0"><i class="pi pi-dollar" style="font-size: 2rem"></i></div>
+                                        <div class="ms-4">
+                                            <h5 class="text-primary">Venta de propiedades</h5>
+                                            <p class="card-text text-gray-600">Vende tu propiedad</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="card text-decoration-none h-100 lift" href="#!">
+                                <div class="card-body py-5">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-stack icon-stack-xl bg-primary text-white flex-shrink-0"><i class="pi pi-home" style="font-size: 2rem"></i></div>
+                                        <div class="ms-4">
+                                            <h5 class="text-primary">Arriendo de propiedades</h5>
+                                            <p class="card-text text-gray-600">Arrienda tu propiedad</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4">
+                            <a class="card text-decoration-none h-100 lift" href="#!">
+                                <div class="card-body py-5">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-stack icon-stack-xl bg-primary text-white flex-shrink-0"><i class="pi pi-chart-bar" style="font-size: 2rem"></i></div>
+                                        <div class="ms-4">
+                                            <h5 class="text-primary">Administración de propiedades</h5>
+                                            <p class="card-text text-gray-600">Administra tu propiedad</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section class="bg-white py-10">
                 <div class="container px-5">
                     <div class="row gx-5 mb-5">
                         <div class="col-lg-4 mb-5">
@@ -111,12 +159,12 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <section class="bg-img-cover overlay overlay-light overlay-80 py-15" style="background-image: url('https://source.unsplash.com/BlIhVfXbi9s/1600x800')">
                 <div class="container px-5 z-1">
                     <div class="mt-5">
                         <div class="display-4 mb-3 text-dark">Administra con Nosotros</div>
-                        <a class="btn btn-primary fw-500" href="#!">¡Contáctanos!</a>
+                        <a class="btn btn-primary fw-500" (click)="scrollToPortfolio('contacto')">¡Contáctanos!</a>
                     </div>
                 </div>
                 <div class="svg-border-angled text-white">
@@ -128,27 +176,34 @@
             <section class="bg-white py-10">
                 <div class="container px-5">
                     <div class="row gx-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.888641190202!2d-70.68515168798886!3d-33.452207673277876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a4f149847d%3A0xf5eeee431a4c52e1!2salameda%203470!5e0!3m2!1ses-419!2scl!4v1710105204201!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.9074947769914!2d-70.61661812357715!3d-33.425655996244245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf644301632b%3A0x6144f35c641cc38a!2sAv.%20Nueva%20Providencia%201881%2C%207500520%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1710548470879!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
             
-            <section>
+            <section id="contacto">
                 <div class="container px-5 z-1 pb-5 pt-5">
+                    <div class="text-center mb-4"><h2>Contáctanos</h2></div>
                     <form [formGroup]="formContacto">
                         <div class="row gx-5 mb-4">
                             <div class="col-md-6">
                                 <label class="text-dark mb-2" for="inputName">Nombre Completo</label>
-                                <input class="form-control py-4" formControlName="nombreCompleto" type="text" placeholder="Ingrese su nombre completo" />
+                                <input class="form-control py-4" formControlName="nombreCompleto" type="text" placeholder="Ingrese su nombre completo" required/>
                             </div>
                             <div class="col-md-6">
                                 <label class="text-dark mb-2" for="inputEmail">Correo</label>
-                                <input class="form-control py-4" formControlName="email" type="email" placeholder="ejemplo@ejemplo.cl" />
+                                <input class="form-control py-4" formControlName="email" type="email" placeholder="ejemplo@ejemplo.cl" required/>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <label class="text-dark mb-2" for="inputMessage">Mensaje</label>
-                            <textarea class="form-control py-3" formControlName="mensaje" type="text" placeholder="Ingresa tu mensaje..." rows="4"></textarea>
+                        <div class="row gx-5 mb-4">
+                            <div class="col-md-6">
+                                <label class="text-dark mb-2" for="inputName">Teléfono</label>
+                                <input class="form-control py-4" formControlName="telefono" type="text" placeholder="Ingrese su teléfono" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-dark mb-2" for="inputMessage">Mensaje</label>
+                                <textarea class="form-control py-3" formControlName="mensaje" type="text" placeholder="Ingresa tu mensaje..." rows="4" required></textarea>
+                            </div>
                         </div>
                         <div class="text-center"><button class="btn btn-primary mt-4" type="submit" (click)="enviarMensaje()">Enviar Mensaje</button></div>
                     </form>
