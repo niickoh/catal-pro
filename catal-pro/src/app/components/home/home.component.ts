@@ -27,8 +27,8 @@ export class HomeComponent {
 
   enviarMensaje() {
     console.log('datos formulario', this.formContacto);
-    if (this.formContacto.value.nombreCompleto != '' || this.formContacto.value.email != '' || 
-        this.formContacto.value.telefono != '' || this.formContacto.value.mensaje != '') {
+    if (!this.formContacto.value.nombreCompleto || !this.formContacto.value.email || 
+        !this.formContacto.value.telefono || !this.formContacto.value.mensaje) {
           this.messageService.add({ severity: 'error', summary: '¡Error!', detail: 'Debes completar el formulario para enviar el mensaje' });
           return;
         }
